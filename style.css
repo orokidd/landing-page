@@ -272,13 +272,13 @@
       flex-direction: column;
       justify-content: flex-end;
 
-      
       background-image: url(./assets/images/why3.jpg);
     }
   .content-child-right {
     flex: 1;
     color: white;
     padding: 40px;
+    min-height: 280px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -351,17 +351,34 @@
     
   }
 
+/* For when the right box of why us content wraps to bottom */
+  @media screen and (max-width: 641px) {
+    .menu {
+      gap: 20px;
+  }
+    .why-container {
+      gap: 20px;
+    }
+  }
+
 @media screen and (max-width: 452px) {
+  .banner-text > h1 {
+    font-size: 3rem;
+}
+  .nav > ul > li:first-child {
+    display: none;
+  }
 
   .banner {
     flex-direction: column-reverse;
 } 
 
-  .service, .workflow-content {
-    min-width: 340px;
+  .service, .workflow-content, .content-child, .content-child-right {
+    min-width: 240px;
   }
 
-  .nav > ul > li:first-child {
+  .content-child-right > div:last-child {
     display: none;
   }
+  
   }
