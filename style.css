@@ -195,6 +195,8 @@
 }
   .workflow-content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 
     min-width: 400px;
     font-family: 'poppins';
@@ -362,6 +364,9 @@
   }
 
 @media screen and (max-width: 452px) {
+  .wrapper {
+    padding: 0 30px;
+}
   .banner-text > h1 {
     font-size: 3rem;
 }
@@ -376,9 +381,19 @@
   .service, .workflow-content, .content-child, .content-child-right {
     min-width: 240px;
   }
-
+  .content-child.third {
+    justify-content: flex-start;
+  }
   .content-child-right > div:last-child {
     display: none;
   }
-  
+  .workflow-content.second > img {
+    order: 3;
+    margin-top: 40px;
   }
+  .workflow-content.fourth > img {
+    order: 3;
+    margin-top: 40px;
+  }
+
+}
